@@ -45,7 +45,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-card/40 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-gold-500 backdrop-blur-sm"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-500/40 bg-purple-600/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-purple-700 backdrop-blur-sm dark:border-purple-400/40 dark:bg-purple-500/15 dark:text-purple-300"
           >
             <SparklesIcon className="h-3.5 w-3.5" />
             {hero.eyebrow}
