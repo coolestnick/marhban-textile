@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ---------- LIGHT THEME ---------- */
+    --background: 45 60% 98%;
+    --foreground: 222 60% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 60% 11%;
+
+    --primary: 217 73% 33%; /* royal blue */
+    --primary-foreground: 45 100% 97%;
+
+    --secondary: 43 89% 55%; /* gold */
+    --secondary-foreground: 222 60% 11%;
+
+    --muted: 45 30% 94%;
+    --muted-foreground: 222 15% 42%;
+
+    --accent: 43 89% 55%;
+    --accent-foreground: 222 60% 11%;
+
+    --border: 222 20% 88%;
+    --input: 222 20% 88%;
+    --ring: 43 89% 55%;
+
+    --radius: 0.9rem;
+  }
+
+  .dark {
+    /* ---------- DARK THEME ---------- */
+    --background: 222 55% 6%;
+    --foreground: 45 50% 96%;
+
+    --card: 222 45% 10%;
+    --card-foreground: 45 50% 96%;
+
+    --primary: 43 89% 55%; /* gold leads in the dark */
+    --primary-foreground: 222 60% 8%;
+
+    --secondary: 217 73% 45%;
+    --secondary-foreground: 45 100% 97%;
+
+    --muted: 222 35% 14%;
+    --muted-foreground: 220 20% 65%;
+
+    --accent: 43 89% 55%;
+    --accent-foreground: 222 60% 8%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 43 89% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-gold-400 text-royal-900;
+  }
+
+  /* Respect users who prefer less motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-300 via-gold-500 to-gold-200 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-royal {
+    @apply bg-gradient-to-r from-royal-400 via-royal-600 to-royal-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid hsl(var(--border) / 0.6);
+  }
+
+  .shimmer-text {
+    background: linear-gradient(
+      110deg,
+      hsl(var(--foreground)) 40%,
+      hsl(var(--primary)) 50%,
+      hsl(var(--foreground)) 60%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    @apply animate-shimmer;
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .perspective {
+    perspective: 1200px;
+  }
+}

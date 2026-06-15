@@ -1,0 +1,89 @@
+import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { brand, nav } from "@/data/site";
+
+const socials = [
+  { icon: Instagram, href: brand.socials.instagram, label: "Instagram" },
+  { icon: Facebook, href: brand.socials.facebook, label: "Facebook" },
+  { icon: Linkedin, href: brand.socials.linkedin, label: "LinkedIn" },
+  { icon: MessageCircle, href: brand.socials.whatsapp, label: "WhatsApp" },
+];
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border">
+      <div className="container py-16">
+        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+          <div>
+            <a href="#home" className="flex items-center gap-3">
+              <img
+                src={brand.logo}
+                alt={brand.fullName}
+                className="h-12 w-12 rounded-full ring-1 ring-gold-400/30"
+              />
+              <span className="font-display text-xl font-semibold">
+                {brand.name}
+                <span className="text-gold-500">.</span>
+              </span>
+            </a>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+              {brand.tagline}. Premium fabrics and timeless clothing, crafted
+              for every season.
+            </p>
+            <div className="mt-6 flex gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  aria-label={s.label}
+                  className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold-400/60 hover:text-gold-500"
+                >
+                  <s.icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-display font-semibold">Explore</h4>
+            <ul className="mt-4 space-y-3">
+              {nav.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-gold-500"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-display font-semibold">Get in touch</h4>
+            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+              <li>{brand.address}</li>
+              <li>
+                <a href={`mailto:${brand.email}`} className="hover:text-gold-500">
+                  {brand.email}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${brand.phone}`} className="hover:text-gold-500">
+                  {brand.phone}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row">
+          <p>
+            © {new Date().getFullYear()} {brand.fullName}. All rights reserved.
+          </p>
+          <p>Woven with care in Oman.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
