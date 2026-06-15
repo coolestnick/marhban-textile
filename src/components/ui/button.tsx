@@ -12,9 +12,9 @@ const buttonVariants = cva(
         royal:
           "bg-royal-700 text-gold-100 shadow-lg shadow-royal-900/30 hover:bg-royal-600 hover:-translate-y-0.5",
         outline:
-          "border border-border bg-transparent text-foreground hover:border-gold-400/70 hover:text-gold-500",
+          "border border-border bg-transparent text-foreground hover:border-gold-600/70 hover:text-gold-700 dark:hover:border-gold-400/70 dark:hover:text-gold-400",
         ghost: "text-foreground hover:bg-muted",
-        link: "text-gold-500 underline-offset-4 hover:underline",
+        link: "text-gold-700 underline-offset-4 hover:underline dark:text-gold-400",
       },
       size: {
         default: "h-12 px-7 py-3",

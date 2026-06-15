@@ -22,7 +22,7 @@ export function Footer() {
               />
               <span className="font-display text-xl font-semibold">
                 {brand.name}
-                <span className="text-gold-500">.</span>
+                <span className="text-gold-700 dark:text-gold-400">.</span>
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -35,7 +35,7 @@ export function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold-400/60 hover:text-gold-500"
+                  className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold-600/60 hover:text-gold-700 dark:hover:border-gold-400/60 dark:hover:text-gold-400"
                 >
                   <s.icon className="h-4 w-4" />
                 </a>
@@ -50,7 +50,7 @@ export function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-gold-500"
+                    className="text-sm text-muted-foreground transition-colors hover:text-gold-700 dark:hover:text-gold-400"
                   >
                     {item.label}
                   </a>
@@ -64,12 +64,12 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li>{brand.address}</li>
               <li>
-                <a href={`mailto:${brand.email}`} className="hover:text-gold-500">
+                <a href={`mailto:${brand.email}`} className="hover:text-gold-700 dark:hover:text-gold-400">
                   {brand.email}
                 </a>
               </li>
               <li>
-                <a href={`tel:${brand.phone}`} className="hover:text-gold-500">
+                <a href={`tel:${brand.phone}`} className="hover:text-gold-700 dark:hover:text-gold-400">
                   {brand.phone}
                 </a>
               </li>
