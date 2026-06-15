@@ -61,7 +61,7 @@ export function About() {
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {about.points.map((point) => (
                 <li key={point} className="flex items-center gap-3">
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold-400/15 text-gold-500">
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold-500/15 text-gold-700 dark:text-gold-400">
                     <Check className="h-3.5 w-3.5" />
                   </span>
                   <span className="text-sm text-foreground/90">{point}</span>

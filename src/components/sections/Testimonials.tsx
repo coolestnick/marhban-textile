@@ -25,7 +25,7 @@ export function Testimonials() {
             variants={staggerItem}
             className="glass flex flex-col gap-5 rounded-3xl p-7"
           >
-            <Quote className="h-8 w-8 text-gold-400" />
+            <Quote className="h-8 w-8 text-gold-700 dark:text-gold-400" />
             <blockquote className="text-lg leading-relaxed text-foreground/90">
               "{t.quote}"
             </blockquote>

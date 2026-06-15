@@ -25,7 +25,7 @@ export function Craft() {
       <div className="container relative">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <Badge className="border-gold-400/40 bg-gold-400/10">
+            <Badge className="border-gold-400/40 bg-gold-400/10 text-gold-300 dark:text-gold-300">
               {craft.eyebrow}
             </Badge>
           </Reveal>
