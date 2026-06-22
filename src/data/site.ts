@@ -15,18 +15,18 @@ export const brand = {
   name: "Marhaba",
   fullName: "Marhaba Textile",
   logo: "/logo.png",
-  tagline: "Woven Heritage, Worn with Pride",
-  email: "hello@marhabatextile.com",
-  phone: "+968 0000 0000",
+  tagline:
+    "The fabric behind every occasion in Oman. In-store, on WhatsApp, or delivered to your door.",
+  email: "marhabainternational8@gmail.com",
+  // "Get in touch" contact number
+  phone: "+968 9296 7581",
   // WhatsApp number in international format, digits only (no +, spaces or dashes).
-  // e.g. Oman number 968 9XXX XXXX → "9689XXXXXXX"
-  whatsapp: "96890000000",
-  address: "Muscat, Sultanate of Oman",
+  // +968 9733 3104 → "96897333104"
+  whatsapp: "96897333104",
+  address: "Sultanate of Oman",
   socials: {
-    instagram: "#",
-    facebook: "#",
-    linkedin: "#",
-    whatsapp: "#",
+    instagram: "https://instagram.com/marhaba_textiles_",
+    instagramHandle: "@marhaba_textiles_",
   },
 };
 
@@ -34,7 +34,6 @@ export const nav = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Collections", href: "#collections" },
-  { label: "Craft", href: "#craft" },
   { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
@@ -42,44 +41,53 @@ export const nav = [
 export const hero = {
   eyebrow: "Premium Fabric House · Est. Oman",
   // Each line animates in on its own row
-  titleLines: ["Threads of", "Tradition,", "Tailored for Tomorrow."],
-  highlight: "Tomorrow",
+  titleLines: ["Fabric Worth", "Coming Back For,", "Season After Season."],
+  highlight: "Back",
   description:
-    "From everyday comfort to ceremonial elegance, Marhaba Textile curates fabrics chosen for their feel, durability, and timeless character — the house families return to, season after season.",
+    "School uniforms, wedding silks, everyday wear — hundreds of varieties, always in stock. Walk in, WhatsApp us, or get it delivered anywhere in Oman.",
   primaryCta: { label: "Explore Collections", href: "#collections" },
   secondaryCta: { label: "Our Story", href: "#about" },
 };
 
 export const marquee = [
-  "Egyptian Cotton",
-  "Pure Linen",
-  "Hand-Loomed Silk",
-  "School Uniforms",
-  "Seasonal Wear",
-  "Bespoke Tailoring",
-  "Sustainable Weaves",
-  "Heritage Prints",
+  "Abaya Material",
+  "Armani Silk",
+  "Crepe & Chiffon",
+  "Velvet — Makhmal",
+  "Stonework Exclusives",
+  "Uniforms Material",
+  "Seasonal Collections",
+  "Nationwide Delivery",
+  "Printed Fabrics",
+  "Voil & Cotton",
+  "Wedding & Party Collection",
 ];
 
-export const stats = [
-  { value: 35, suffix: "+", label: "Years of Craft" },
-  { value: 120, suffix: "+", label: "Fabric Varieties" },
-  { value: 50, suffix: "K", label: "Happy Families" },
-  { value: 18, suffix: "", label: "Retail Partners" },
+export type Stat = {
+  value?: number;
+  suffix?: string;
+  text?: string;
+  label: string;
+};
+
+export const stats: Stat[] = [
+  { value: 38, suffix: "+", label: "Years in Business" },
+  { value: 5, suffix: "", label: "Branches" },
+  { text: "Oman", label: "Delivering All Over" },
 ];
 
 export const about = {
   eyebrow: "Our Story",
-  title: "A name woven into everyday life.",
+  title: "We know fabric. That's all we do.",
   body: [
-    "For over three decades, Marhaba Textile has been a trusted destination for high-quality fabrics across the region. We began as a small family loom and grew into a house known for comfort, durability, and timeless appeal.",
-    "Whether you are a parent preparing for the school year, a designer sourcing specialty cloth, or a family dressing for a celebration — Marhaba is where quality begins.",
+    "Marhaba Textile is built around one thing: having what you need, when you need it. We carry one of the widest fabric selections in Oman, from everyday wear to exclusive ceremonial and occasion pieces.",
+    "Our team knows the collection inside out. And unlike anywhere else, our stonework and embellishment pieces are designed and applied in-house — which means you're getting something genuinely exclusive, not mass-produced.",
   ],
   points: [
-    "Ethically sourced natural fibers",
-    "In-house quality control on every bolt",
+    "Premium Suits and Abaya Material",
     "Custom orders for schools & institutions",
-    "Trusted by tailors and designers alike",
+    "Exclusive stonework designs, only at Marhaba",
+    "Oman-wide delivery on all orders",
   ],
 };
 
@@ -91,41 +99,61 @@ export type Collection = {
   accent: "gold" | "royal";
 };
 
+// NOTE: images below are placeholders — replace each `image` with the
+// photos you provide (drop them in /public and use "/your-photo.jpg").
 export const collections: Collection[] = [
   {
-    title: "Heritage Cottons",
+    title: "Voil & Cotton",
     description:
-      "Breathable, long-staple cottons for everyday wear that only soften with time.",
+      "Light, breathable voile and everyday cotton for all-day comfort.",
     tag: "Everyday",
     image:
       "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200&auto=format&fit=crop",
     accent: "gold",
   },
   {
-    title: "Ceremonial Silks",
+    title: "Silk",
     description:
-      "Hand-loomed silks with a luminous drape, made for occasions that matter.",
+      "Luminous silks with a soft, flowing drape for occasions that matter.",
     tag: "Occasion",
     image:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop",
     accent: "royal",
   },
   {
-    title: "Pure Linen",
+    title: "Abaya Material Fancy",
     description:
-      "Crisp, cooling linens engineered for the warmest seasons and clean tailoring.",
-    tag: "Summer",
+      "Premium fancy abaya fabrics with a rich finish and elegant flow.",
+    tag: "Abaya",
     image:
       "https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=1200&auto=format&fit=crop",
     accent: "gold",
   },
   {
-    title: "Uniform Essentials",
+    title: "Velvet",
     description:
-      "Durable, color-fast fabrics built to survive every school year in style.",
-    tag: "Institutional",
+      "Plush velvet — makhmal — with depth and warmth for winter and weddings.",
+    tag: "Premium",
     image:
       "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=1200&auto=format&fit=crop",
+    accent: "royal",
+  },
+  {
+    title: "Shiffon & Braisim",
+    description:
+      "Flowing chiffon and braisim for graceful, layered looks.",
+    tag: "Flowy",
+    image:
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1200&auto=format&fit=crop",
+    accent: "gold",
+  },
+  {
+    title: "Hijab & Scarfs",
+    description:
+      "A wide range of hijabs and scarves in every shade and finish.",
+    tag: "Accessories",
+    image:
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1200&auto=format&fit=crop",
     accent: "royal",
   },
 ];
@@ -188,8 +216,8 @@ export const testimonials = [
 ];
 
 export const cta = {
-  title: "Let's weave something timeless together.",
-  body: "Visit our showroom or request a fabric consultation for your family, school, or label.",
-  primary: { label: "Contact Us", href: "#contact" },
-  secondary: { label: "Book a Consultation", href: "#contact" },
+  title: "Let's find your fabric.",
+  body: "Message us on WhatsApp, give us a call, or visit a branch — our team will help you find exactly what you need and deliver it anywhere in Oman.",
+  primary: { label: "Chat on WhatsApp", href: "#contact" },
+  secondary: { label: "Call Us", href: "#contact" },
 };

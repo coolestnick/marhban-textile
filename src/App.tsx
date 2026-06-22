@@ -6,11 +6,11 @@ import { Marquee } from "@/components/sections/Marquee";
 import { Stats } from "@/components/sections/Stats";
 import { About } from "@/components/sections/About";
 import { Collections } from "@/components/sections/Collections";
-import { Craft } from "@/components/sections/Craft";
 import { Gallery } from "@/components/sections/Gallery";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
+import { FloatingWhatsApp } from "@/components/sections/FloatingWhatsApp";
 
 export default function App() {
   return (
@@ -23,12 +23,12 @@ export default function App() {
         <Stats />
         <About />
         <Collections />
-        <Craft />
         <Gallery />
         <Testimonials />
         <Contact />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </ThemeProvider>
   );
 }

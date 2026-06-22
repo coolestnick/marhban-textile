@@ -32,9 +32,9 @@ export function About() {
               />
               <div>
                 <p className="font-display text-lg font-semibold leading-none">
-                  35+ years
+                  30+ Years
                 </p>
-                <p className="text-xs text-muted-foreground">of woven trust</p>
+                <p className="text-xs text-muted-foreground">Serving Oman</p>
               </div>
             </div>
           </motion.div>

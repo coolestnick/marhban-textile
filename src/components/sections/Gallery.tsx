@@ -23,7 +23,7 @@ export function Gallery() {
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="mx-auto mt-5 max-w-xl font-display text-[clamp(2rem,4vw,3.5rem)] font-bold leading-tight tracking-tight">
-            Texture, color &amp; craft in every thread.
+            A closer look at what we carry.
           </h2>
         </Reveal>
       </div>

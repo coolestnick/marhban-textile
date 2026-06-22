@@ -36,7 +36,7 @@ function Counter({ end, suffix }: { end: number; suffix: string }) {
 export function Stats() {
   return (
     <section className="container py-20">
-      <StaggerGroup className="grid grid-cols-2 gap-6 md:grid-cols-4">
+      <StaggerGroup className="grid grid-cols-1 gap-6 sm:grid-cols-3">
         {stats.map((s) => (
           <motion.div
             key={s.label}
@@ -44,7 +44,11 @@ export function Stats() {
             className="glass rounded-3xl p-7 text-center"
           >
             <div className="font-display text-4xl font-bold text-gradient-gold md:text-5xl">
-              <Counter end={s.value} suffix={s.suffix} />
+              {typeof s.value === "number" ? (
+                <Counter end={s.value} suffix={s.suffix ?? ""} />
+              ) : (
+                s.text
+              )}
             </div>
             <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
           </motion.div>

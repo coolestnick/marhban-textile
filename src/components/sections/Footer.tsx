@@ -1,11 +1,14 @@
-import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { brand, nav } from "@/data/site";
+import { WhatsAppIcon, waLink } from "@/components/ui/whatsapp-icon";
 
 const socials = [
-  { icon: Instagram, href: brand.socials.instagram, label: "Instagram" },
-  { icon: Facebook, href: brand.socials.facebook, label: "Facebook" },
-  { icon: Linkedin, href: brand.socials.linkedin, label: "LinkedIn" },
-  { icon: MessageCircle, href: brand.socials.whatsapp, label: "WhatsApp" },
+  {
+    icon: Instagram,
+    href: brand.socials.instagram,
+    label: brand.socials.instagramHandle,
+  },
+  { icon: WhatsAppIcon, href: waLink(brand.whatsapp), label: "WhatsApp" },
 ];
 
 export function Footer() {
@@ -26,14 +29,15 @@ export function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              {brand.tagline}. Premium fabrics and timeless clothing, crafted
-              for every season.
+              {brand.tagline}
             </p>
             <div className="mt-6 flex gap-3">
               {socials.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={s.label}
                   className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold-600/60 hover:text-gold-700 dark:hover:border-gold-400/60 dark:hover:text-gold-400"
                 >
@@ -69,7 +73,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`tel:${brand.phone}`} className="hover:text-gold-700 dark:hover:text-gold-400">
+                <a href={`tel:${brand.phone.replace(/\s/g, "")}`} className="hover:text-gold-700 dark:hover:text-gold-400">
                   {brand.phone}
                 </a>
               </li>
@@ -81,7 +85,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {brand.fullName}. All rights reserved.
           </p>
-          <p>Woven with care in Oman.</p>
+          <p>Proudly serving Oman.</p>
         </div>
       </div>
     </footer>

@@ -4,7 +4,13 @@ import { Menu, X } from "lucide-react";
 import { brand, nav } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
+import { WhatsAppIcon, waLink } from "@/components/ui/whatsapp-icon";
 import { cn } from "@/lib/utils";
+
+const contactHref = waLink(
+  brand.whatsapp,
+  `Hi ${brand.fullName}, I'd like to ask about your fabrics.`
+);
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -63,9 +69,12 @@ export function Navbar() {
         {/* Actions */}
         <div className="flex items-center gap-2">
           <ThemeToggle className="border-white/20 bg-white/5 text-gold-50 hover:border-gold-400/60 hover:text-gold-300" />
-          <Button size="sm" className="hidden sm:inline-flex">
-            Contact Us
-          </Button>
+          <a href={contactHref} target="_blank" rel="noopener noreferrer">
+            <Button size="sm" className="hidden sm:inline-flex">
+              <WhatsAppIcon className="h-4 w-4" />
+              Contact Us
+            </Button>
+          </a>
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
@@ -99,7 +108,17 @@ export function Navbar() {
                 </li>
               ))}
               <li className="pt-2">
-                <Button className="w-full">Contact Us</Button>
+                <a
+                  href={contactHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
+                  <Button className="w-full">
+                    <WhatsAppIcon className="h-4 w-4" />
+                    Contact Us
+                  </Button>
+                </a>
               </li>
             </ul>
           </motion.div>

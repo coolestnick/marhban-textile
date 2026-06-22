@@ -84,7 +84,7 @@ export function Collections() {
           </Reveal>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {collections.map((item, i) => (
             <CollectionCard key={item.title} item={item} index={i} />
           ))}
