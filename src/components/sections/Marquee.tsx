@@ -6,7 +6,7 @@ export function Marquee() {
   return (
     <section
       aria-hidden
-      className="relative border-y border-border bg-royal-900 py-5 dark:bg-royal-950"
+      className="relative overflow-hidden border-y border-border bg-royal-900 py-5 dark:bg-royal-950"
     >
       <div className="flex w-max animate-marquee gap-8 whitespace-nowrap">
         {items.map((item, i) => (

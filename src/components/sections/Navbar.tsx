@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { brand, nav } from "@/data/site";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { WhatsAppIcon, waLink } from "@/components/ui/whatsapp-icon";
 import { cn } from "@/lib/utils";
 
@@ -28,24 +27,24 @@ export function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed inset-x-0 top-0 z-50 px-4 pt-4"
+      className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4"
     >
       <nav
         className={cn(
-          "container flex items-center justify-between rounded-full border border-white/10 px-4 py-2.5 backdrop-blur-xl transition-all duration-500",
+          "mx-auto flex w-full max-w-6xl items-center justify-between gap-2 rounded-full border border-white/10 px-3 py-2 backdrop-blur-xl transition-all duration-500 sm:px-4 sm:py-2.5",
           scrolled
             ? "bg-royal-950/85 shadow-lg shadow-black/25"
             : "bg-royal-900/45"
         )}
       >
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
+        <a href="#home" className="flex min-w-0 shrink items-center gap-2.5">
           <img
             src={brand.logo}
             alt={`${brand.fullName} logo`}
-            className="h-11 w-11 rounded-full ring-1 ring-gold-400/30"
+            className="h-9 w-9 shrink-0 rounded-full ring-1 ring-gold-400/30 sm:h-11 sm:w-11"
           />
-          <span className="hidden font-display text-lg font-semibold tracking-tight text-gold-50 sm:block">
+          <span className="truncate font-display text-base font-semibold tracking-tight text-gold-50 sm:text-lg">
             {brand.name}
             <span className="text-gold-400">.</span>
           </span>
@@ -67,8 +66,7 @@ export function Navbar() {
         </ul>
 
         {/* Actions */}
-        <div className="flex items-center gap-2">
-          <ThemeToggle className="border-white/20 bg-white/5 text-gold-50 hover:border-gold-400/60 hover:text-gold-300" />
+        <div className="flex shrink-0 items-center gap-2">
           <a href={contactHref} target="_blank" rel="noopener noreferrer">
             <Button size="sm" className="hidden sm:inline-flex">
               <WhatsAppIcon className="h-4 w-4" />
@@ -78,7 +76,7 @@ export function Navbar() {
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-gold-50 lg:hidden"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 text-gold-50 sm:h-10 sm:w-10 lg:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -93,7 +91,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="container mt-2 overflow-hidden rounded-3xl border border-white/10 bg-royal-950/95 p-4 backdrop-blur-xl lg:hidden"
+            className="mx-auto mt-2 w-full max-w-6xl overflow-hidden rounded-3xl border border-white/10 bg-royal-950/95 p-4 backdrop-blur-xl lg:hidden"
           >
             <ul className="flex flex-col gap-1">
               {nav.map((item) => (

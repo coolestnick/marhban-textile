@@ -55,9 +55,9 @@ export function Contact() {
 
         <div className="relative grid gap-12 lg:grid-cols-2">
           {/* Left: pitch + details */}
-          <div className="text-gold-50">
+          <div className="min-w-0 text-gold-50">
             <Reveal>
-              <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-bold leading-tight tracking-tight">
+              <h2 className="break-words font-display text-[clamp(2rem,4vw,3.25rem)] font-bold leading-tight tracking-tight">
                 {cta.title}
               </h2>
             </Reveal>
@@ -78,11 +78,13 @@ export function Contact() {
                     <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold-400/15 text-gold-400">
                       <item.icon className="h-5 w-5" />
                     </span>
-                    <span>
+                    <span className="min-w-0">
                       <span className="block text-xs uppercase tracking-wider text-gold-100/50">
                         {item.label}
                       </span>
-                      <span className="block font-medium">{item.value}</span>
+                      <span className="block break-words font-medium">
+                        {item.value}
+                      </span>
                     </span>
                   </a>
                 </Reveal>

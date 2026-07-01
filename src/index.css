@@ -64,10 +64,13 @@
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
   }
 

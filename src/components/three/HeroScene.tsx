@@ -1,7 +1,6 @@
 import { Suspense, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import { useTheme } from "@/components/theme/theme-provider";
 
 /**
  * A single sheet of silk, gently rippling — like fabric catching a slow breeze.
@@ -67,8 +66,8 @@ function SilkSheet({
 }
 
 function Scene() {
-  const { theme } = useTheme();
-  const dark = theme === "dark";
+  // Site is locked to light mode.
+  const dark = false;
 
   const gold = "#f0b429";
   const royal = dark ? "#1f47a3" : "#4a78db";
