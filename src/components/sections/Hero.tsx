@@ -107,13 +107,15 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="relative hidden lg:block"
         >
-          <div className="relative mx-auto aspect-square w-full max-w-md">
-            <div className="absolute inset-0 animate-float rounded-full bg-gradient-to-br from-gold-400/20 to-royal-600/20 blur-2xl" />
-            <div className="glass absolute inset-6 grid place-items-center rounded-[2.5rem] p-10">
+          <div className="relative mx-auto aspect-square w-full max-w-xl">
+            <div className="absolute inset-0 animate-float rounded-[2.75rem] bg-gradient-to-br from-gold-400/20 to-royal-600/20 blur-2xl" />
+            {/* Square frame — drop any square image in /public and point src to it.
+                object-cover makes it fill the box equally on all sides. */}
+            <div className="glass absolute inset-0 overflow-hidden rounded-[2.75rem] p-3">
               <img
                 src="/logo.png"
                 alt="Marhaba Textile"
-                className="w-2/3 animate-float drop-shadow-[0_10px_40px_rgba(240,180,41,0.35)]"
+                className="h-full w-full rounded-[2.25rem] object-cover"
               />
             </div>
           </div>
