@@ -61,7 +61,15 @@ export function Hero() {
                   animate="show"
                   className="block"
                 >
-                  {line}
+                  {line.split(" ").map((word, j) =>
+                    word === hero.highlight ? (
+                      <span key={j} style={{ color: "#fad42a" }}>
+                        {word}{" "}
+                      </span>
+                    ) : (
+                      <span key={j}>{word} </span>
+                    )
+                  )}
                 </motion.span>
               </span>
             ))}

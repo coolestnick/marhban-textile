@@ -67,18 +67,18 @@ export function Contact() {
 
             <div className="mt-10 space-y-4">
               {contactItems.map((item, i) => (
-                <Reveal key={item.label} delay={0.1 + i * 0.05}>
+                <Reveal key={item.label} className="w-full" delay={0.1 + i * 0.05}>
                   <a
                     href={item.href}
                     {...(item.external
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
-                    className="group flex items-center gap-4 rounded-2xl border border-gold-400/15 bg-white/5 p-4 transition-colors hover:border-gold-400/40"
+                    className="group flex w-full min-w-0 items-center gap-4 overflow-hidden rounded-2xl border border-gold-400/15 bg-white/5 p-4 transition-colors hover:border-gold-400/40"
                   >
                     <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold-400/15 text-gold-400">
                       <item.icon className="h-5 w-5" />
                     </span>
-                    <span className="min-w-0">
+                    <span className="min-w-0 flex-1">
                       <span className="block text-xs uppercase tracking-wider text-gold-100/50">
                         {item.label}
                       </span>
@@ -93,7 +93,7 @@ export function Contact() {
           </div>
 
           {/* Right: WhatsApp-first call to action (replaces the old form) */}
-          <Reveal delay={0.15}>
+          <Reveal className="min-w-0" delay={0.15}>
             <motion.div className="glass flex h-full flex-col justify-center gap-6 rounded-3xl p-8 text-center md:p-10">
               <span className="mx-auto grid h-20 w-20 place-items-center rounded-2xl bg-[#25D366]/15 text-[#25D366]">
                 <WhatsAppIcon className="h-10 w-10" />
