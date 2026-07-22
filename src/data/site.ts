@@ -135,7 +135,7 @@ export const collections: Collection[] = [
       "Plush velvet — makhmal — with depth and warmth for winter and weddings.",
     tag: "Premium",
     image:
-      "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260625_214054.jpg",
+      "https://res.cloudinary.com/diql6lwwj/image/upload/v1784746985/20260625_214054_jrrlcp.jpg",
     accent: "royal",
   },
   {
