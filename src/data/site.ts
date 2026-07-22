@@ -191,7 +191,7 @@ export const gallery = [
   "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260625_215007.jpg",
   "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/Velvet/20260625_214054.jpg",
   "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260625_215308.jpg",
-  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260625_214054.jpg",
+  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260424_181255.jpg",
 ];
 
 export const testimonials = [
