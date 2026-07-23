@@ -108,7 +108,7 @@ export const collections: Collection[] = [
       "Light, breathable voile and everyday cotton for all-day comfort.",
     tag: "Everyday",
     image:
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200&auto=format&fit=crop",
+      "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/IMG_20260618_222106_DRO.jpg",
     accent: "gold",
   },
   {
@@ -117,7 +117,7 @@ export const collections: Collection[] = [
       "Luminous silks with a soft, flowing drape for occasions that matter.",
     tag: "Occasion",
     image:
-      "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop",
+      "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/Silk/IMG_20260618_224305_NR.jpg",
     accent: "royal",
   },
   {
@@ -126,7 +126,7 @@ export const collections: Collection[] = [
       "Premium fancy abaya fabrics with a rich finish and elegant flow.",
     tag: "Abaya",
     image:
-      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=1200&auto=format&fit=crop",
+      "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260621_214436.jpg",
     accent: "gold",
   },
   {
@@ -135,7 +135,7 @@ export const collections: Collection[] = [
       "Plush velvet — makhmal — with depth and warmth for winter and weddings.",
     tag: "Premium",
     image:
-      "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=1200&auto=format&fit=crop",
+      "https://res.cloudinary.com/diql6lwwj/image/upload/v1784746985/20260625_214054_jrrlcp.jpg",
     accent: "royal",
   },
   {
@@ -144,7 +144,7 @@ export const collections: Collection[] = [
       "Flowing chiffon and braisim for graceful, layered looks.",
     tag: "Flowy",
     image:
-      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1200&auto=format&fit=crop",
+      "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260625_220016.jpg",
     accent: "gold",
   },
   {
@@ -153,7 +153,7 @@ export const collections: Collection[] = [
       "A wide range of hijabs and scarves in every shade and finish.",
     tag: "Accessories",
     image:
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1200&auto=format&fit=crop",
+      "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/IMG_20260621_222102_NR.jpg",
     accent: "royal",
   },
 ];
@@ -186,12 +186,12 @@ export const craft = {
 };
 
 export const gallery = [
-  "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&auto=format&fit=crop",
+  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260424_181255.jpg",
+  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/1781803970058.png",
+  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260625_215007.jpg",
+  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/Velvet/20260625_214054.jpg",
+  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/20260625_215308.jpg",
+  "https://ik.imagekit.io/ga2fws3pt8/Marhaba%20Textiles%20Photos/Velvet/20260625_214054.jpg",
 ];
 
 export const testimonials = [
